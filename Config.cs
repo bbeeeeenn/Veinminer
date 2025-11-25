@@ -45,7 +45,11 @@ public class PluginSettings
             {
                 string json = File.ReadAllText(ConfigPath);
                 PluginSettings? deserializedConfig = JsonConvert.DeserializeObject<PluginSettings>(
-                    json
+                    json,
+                    new JsonSerializerSettings()
+                    {
+                        ObjectCreationHandling = ObjectCreationHandling.Replace,
+                    }
                 );
                 if (deserializedConfig != null)
                 {
