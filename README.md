@@ -2,11 +2,13 @@
 
 **Installation**
 
-1. Build the plugin and copy the compiled DLL into your TShock `plugins` folder (e.g. `tshock\Server\Plugins`).
-2. Start the server. The plugin will create a `config.json` inside a plugin directory under TShock's save path (e.g. `tshock/Veinminer/config.json`).
+1. [Download the plugin `.dll` file from the Releases page](https://github.com/bbeeeeenn/Veinminer/releases).
+2. Place the file in your TShock server’s `ServerPlugins` folder.
+3. Restart your TShock server.
+4. The plugin is now active and ready to use.
 
 **Usage / Commands**
-By default the plugin registers the command aliases defined in the config (defaults: `veinminer` and `vm`).
+By default the plugin registers the command aliases defined in the config (`veinminer` and `vm`).
 
 Examples:
 
@@ -69,4 +71,4 @@ Notes on options:
 
 ---
 
-This is AI generated `README.md` file
+This is an AI generated `README.md` file
