@@ -1,4 +1,3 @@
-using System.Threading.Tasks.Dataflow;
 using Microsoft.Xna.Framework;
 using Terraria;
 using TShockAPI;
@@ -43,7 +42,7 @@ public static partial class Helpers
 
             if (vein.Count <= freeSlot)
             {
-                player.GiveItem(item.type, vein.Count);
+                player.GiveItem(item.type, stack: vein.Count);
                 foreach (Point p in vein)
                 {
                     KillTile(p, true);
@@ -73,7 +72,7 @@ public static partial class Helpers
                     ? freeSlot
                     : vein.Count;
 
-                player.GiveItem(item.type, freeSlot);
+                player.GiveItem(item.type, stack: freeSlot);
                 for (int i = 0; i < vein.Count; i++)
                 {
                     if (i < freeSlot)

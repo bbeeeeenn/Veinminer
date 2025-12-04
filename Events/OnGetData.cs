@@ -39,10 +39,6 @@ public class OnGetData : Event
         short flag = reader.ReadInt16();
 
         ITile tile = Main.tile[tileX, tileY];
-        // TShock.Utils.Broadcast(
-        //     $"action:{action}, flag:{flag}, tile.type:{tile.type} tile.active:{tile.active()}",
-        //     Color.AliceBlue
-        // );
         if (action == 0 && flag == 0)
         {
             if (PluginSettings.Config.TileIds.Contains(tile.type))
