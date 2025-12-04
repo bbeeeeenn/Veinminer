@@ -1,9 +1,9 @@
 using TerrariaApi.Server;
 using TShockAPI;
 using TShockAPI.Hooks;
-using TShockPlugin.Models;
+using VeinMiner.Models;
 
-namespace TShockPlugin.Events;
+namespace VeinMiner.Events;
 
 public class OnReload : Event
 {

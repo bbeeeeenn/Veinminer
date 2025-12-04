@@ -1,14 +1,14 @@
-using TShockPlugin.Commands;
-using TShockPlugin.Models;
+using VeinMiner.Commands;
+using VeinMiner.Models;
 
-namespace TShockPlugin;
+namespace VeinMiner;
 
 public class CommandManager
 {
     public static readonly List<Command> Commands = new()
     {
         // Commands
-        new DummyCommand(),
+        new Veinminer(),
     };
 
     public static void RegisterAll()

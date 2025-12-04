@@ -1,9 +1,10 @@
 using Microsoft.Xna.Framework;
 using Newtonsoft.Json;
+using Terraria.ID;
 using TShockAPI;
-using TShockPlugin.Models;
+using VeinMiner.Models;
 
-namespace TShockPlugin;
+namespace VeinMiner;
 
 public class PluginSettings
 {
@@ -15,6 +16,46 @@ public class PluginSettings
 
     public static PluginSettings Config { get; set; } = new();
     #region Configs
+    public bool Enabled = true;
+    public ConfigGiveItemsDirectly GiveItemsDirectly = new();
+    public ConfigBroadcast Broadcast = new();
+    public int MaxTileDestroy = 100;
+    public List<int> TileIds = new()
+    {
+        TileID.Copper,
+        TileID.Tin,
+        TileID.Iron,
+        TileID.Lead,
+        TileID.Silver,
+        TileID.Tungsten,
+        TileID.Gold,
+        TileID.Platinum,
+        TileID.Meteorite,
+        TileID.Demonite,
+        TileID.Crimtane,
+        TileID.Obsidian,
+        TileID.Hellstone,
+        TileID.Cobalt,
+        TileID.Palladium,
+        TileID.Mythril,
+        TileID.Orichalcum,
+        TileID.Adamantite,
+        TileID.Titanium,
+        TileID.Chlorophyte,
+        TileID.LunarOre,
+        TileID.Diamond,
+        TileID.Ruby,
+        TileID.Emerald,
+        TileID.Sapphire,
+        TileID.Topaz,
+        TileID.Amethyst,
+        TileID.ExposedGems,
+        TileID.Silt,
+        TileID.Slush,
+        TileID.DesertFossil,
+    };
+    public string[] CommandAliases = { "veinminer", "vm" };
+    public string PermissionNode = "veinminer";
 
     #endregion
     public static void Save()
@@ -83,5 +124,17 @@ public class PluginSettings
                 };
             }
         }
+    }
+
+    public class ConfigGiveItemsDirectly
+    {
+        public bool Enabled = true;
+        public bool DisableVeinmineWhenNoFreeSlot = false;
+    }
+
+    public class ConfigBroadcast
+    {
+        public bool Enabled = true;
+        public string Format = "Mined {0}";
     }
 }

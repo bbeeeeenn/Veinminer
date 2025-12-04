@@ -1,8 +1,8 @@
 using TerrariaApi.Server;
-using TShockPlugin.Events;
-using TShockPlugin.Models;
+using VeinMiner.Events;
+using VeinMiner.Models;
 
-namespace TShockPlugin;
+namespace VeinMiner;
 
 public class EventManager
 {
@@ -10,6 +10,8 @@ public class EventManager
     {
         // Events
         new OnReload(),
+        new OnGetData(),
+        new OnPostLogin(),
     };
 
     public static void RegisterAll(TerrariaPlugin plugin)

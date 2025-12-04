@@ -1,6 +1,4 @@
-using System;
-
-namespace TShockPlugin.Models;
+namespace VeinMiner.Models;
 
 public struct ResponseMessage
 {
